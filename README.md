@@ -8,6 +8,8 @@ Karena jaringan butuh 7 interface, tambah module PT-ROUTER-NM-1CGE
 ```
 klik router -> physical -> matikan router -> tambahkan PT-ROUTER-NM-1CGE -> nyalakan router
 ```
+![module](assets/module.jpg)
+
 
 di CLI HQ tambahkan IP Address:
 ```bash
