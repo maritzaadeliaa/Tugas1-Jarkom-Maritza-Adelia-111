@@ -49,7 +49,7 @@ interface g5/0
 exit
 
 interface GigabitEthernet6/0
- ip address 10.151.255.0 255.255.255.224
+ ip address 10.151.255.0 255.255.255.254
  no shut
 exit
 ip route 10.151.4.0 255.255.255.224 10.151.255.1
