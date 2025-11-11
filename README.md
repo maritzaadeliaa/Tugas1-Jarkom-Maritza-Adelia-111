@@ -4,7 +4,7 @@
 
 ![topologi](assets/topologi.jpg)
 
-Karena jaringan butuh 7 interface, tambah module PT-ROUTER-NM-1CGE
+Karena jaringan butuh banyak interface, tambah module PT-ROUTER-NM-1CGE
 ```
 klik router -> physical -> matikan router -> tambahkan PT-ROUTER-NM-1CGE -> nyalakan router
 ```
@@ -44,15 +44,15 @@ interface g4/0
 exit
 
 interface g5/0
- ip address 10.151.3.225 255.255.255.240
+ ip address 10.151.3.225 255.255.255.248
  no shut
 exit
 
 interface GigabitEthernet6/0
- ip address 10.151.4.17 255.255.255.252
+ ip address 10.151.255.0 255.255.255.224
  no shut
 exit
-ip route 10.151.5.0 255.255.255.224 10.151.4.18
+ip route 10.151.4.0 255.255.255.224 10.151.255.1
 end
 
 ```
@@ -61,10 +61,10 @@ Di Branch (Gi0/1):
 ```bash
 conf t
 interface GigabitEthernet0/1
- ip address 10.151.4.18 255.255.255.252
+ ip address 10.151.255.1 255.255.255.254
  no shut
 exit
-ip route 0.0.0.0 0.0.0.0 10.151.4.17
+ip route 0.0.0.0 0.0.0.0 10.151.255.0
 end
 ```
 Cek dengan:
@@ -81,12 +81,12 @@ tes koneksi HQ - BR:
 
 di HQ:
 ```bash
-ping 10.151.4.18
+ping 10.151.255.1
 ```
 ![pingHQ](assets/pingbr.jpg)
 
 Di BR:
 ```bash
-ping 10.151.4.17
+ping 10.151.255.0
 ```
 ![pingBR](assets/pinghq.jpg)
