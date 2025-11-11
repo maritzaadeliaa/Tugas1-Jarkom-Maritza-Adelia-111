@@ -39,17 +39,12 @@ interface g3/0
 exit
 
 interface g4/0
- ip address 10.151.3.193 255.255.255.224
+ ip address 10.151.3.193 255.255.255.240
  no shut
 exit
 
 interface g5/0
- ip address 10.151.3.225 255.255.255.248
- no shut
-exit
-
-interface GigabitEthernet6/0
- ip address 10.151.255.0 255.255.255.254
+ ip address 10.151.255.2 255.255.255.252
  no shut
 exit
 ip route 10.151.4.0 255.255.255.224 10.151.255.1
@@ -57,14 +52,20 @@ end
 
 ```
 
-Di Branch (Gi0/1):
+Di Branch:
 ```bash
 conf t
-interface GigabitEthernet0/1
- ip address 10.151.255.1 255.255.255.254
+interface g0/1
+ ip address 10.151.255.1 255.255.255.252
  no shut
 exit
-ip route 0.0.0.0 0.0.0.0 10.151.255.0
+ip route 0.0.0.0 0.0.0.0 10.151.255.2
+end
+
+interface g0/0
+ ip address 10.151.4.1 255.255.255.224
+ no shut
+exit
 end
 ```
 Cek dengan:
@@ -87,6 +88,6 @@ ping 10.151.255.1
 
 Di BR:
 ```bash
-ping 10.151.255.0
+ping 10.151.255.2
 ```
 ![pingBR](assets/pinghq.jpg)
