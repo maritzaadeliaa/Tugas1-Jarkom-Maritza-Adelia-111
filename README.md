@@ -51,6 +51,15 @@ ip route 10.151.4.0 255.255.255.224 10.151.255.1
 end
 
 ```
+Cek dengan:
+```bash
+show ip interface brief
+```
+![setip](assets/showipbrief.jpg)
+
+Cek Prefix:
+
+![setpre](assets/iproute.jpg)
 
 Di Branch:
 ```bash
@@ -72,11 +81,8 @@ Cek dengan:
 ```bash
 show ip interface brief
 ```
-![setip](assets/aftersetip.jpg)
+![setip](assets/showipbrief2.jpg)
 
-Cek Prefix:
-
-![setpre](assets/setprefix.jpg)
 ## Set PC 
 
 Buka PC → Desktop Tab → IP Configuration
@@ -134,21 +140,27 @@ Default Gateway: 10.151.4.1
 Buka PC → Desktop Tab → Command Prompt
 
 ```ping 10.151.0.1```    (dari PC-Sekre)
+
 ![ping1](assets/pingsekre.jpg)
 
 ```ping 10.151.2.1```    (dari PC-Kur) 
+
 ![ping2](assets/pingkur.jpg)
 
 ```ping 10.151.3.1```    (dari PC-Guru)
+
 ![ping3](assets/pingguru.jpg)
 
 ```ping 10.151.3.129```  (dari PC-Sarpras)
+
 ![ping4](assets/pingsarpras.jpg)
 
 ```ping 10.151.3.193```  (dari PC-Server)
+
 ![ping5](assets/pingserver.jpg)
 
 ```ping 10.151.4.1```    (dari PC Cabang)
+
 ![ping6](assets/pingpengawas.jpg)
 
 
@@ -156,10 +168,12 @@ Buka PC → Desktop Tab → Command Prompt
 
 ``` ping 10.151.255.1 ``` (Router Pusat)
 
-![pingHQ](assets/pingbr.jpg)
+
+![pingHQ](assets/pingpusat.jpg)
 
 ``` ping 10.151.255.2 ``` (Router Cabang)
 
-![pingBR](assets/pinghq.jpg)
+
+![pingBR](assets/pingcabang.jpg)
 
 
